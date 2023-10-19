@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Scraper API Documentation</title>
+    <head>
+        <style>
+        body {
+          font-family: "Helvetica Neue", Arial, sans-serif;
+          color: #444;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Helvetica Neue", Arial, sans-serif;
+          font-weight: bold;
+        }
+        
+        h1 {
+          font-size: 2.5em;
+          margin-bottom: 0.5em;
+        }
+        
+        h2 {
+          font-size: 2em;
+          margin-bottom: 0.5em;
+        }
+        
+        h3 {
+          font-size: 1.5em;
+          margin-bottom: 0.5em;
+        }
+        
+        h4 {
+          font-size: 1.25em;
+          margin-bottom: 0.5em;
+        }
+        
+        h5 {
+          font-size: 1em;
+          margin-bottom: 0.5em;
+        }
+        
+        h6 {
+          font-size: 0.875em;
+          margin-bottom: 0.5em;
+        }
+        
+        p {
+          margin-bottom: 1em;
+        }
+        
+        a {
+          color: #337ab7;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          text-decoration: underline;
+        }
+        
+        code {
+          font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+          font-size: 0.9em;
+          background-color: #f5f5f5;
+          padding: 0.25em 0.5em;
+          border-radius: 3px;
+        }
+        
+        pre {
+          font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+          font-size: 0.9em;
+          background-color: #f5f5f5;
+          padding: 0.5em;
+          border-radius: 3px;
+        }
+        
+        blockquote {
+          margin-left: 0;
+          padding-left: 1.5em;
+          border-left: 0.25em solid #ccc;
+        }
+        
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+        
+        th, td {
+          padding: 0.25em 0.5em;
+          border-bottom: 1px solid #ccc;
+        }
+        
+        th {
+          text-align: left;
+        }
+        
+        .endpoint {
+          margin-bottom: 2em;
+          border: 1px solid #ccc;
+          padding: 1em;
+          border-radius: 3px;
+        }
+        
+        .endpoint h2 {
+          margin-top: 0;
+        }
+        
+        .example {
+          margin-bottom: 1em;
+        }
+        
+        .response {
+          margin-bottom: 1em;
+        }
+        </style>
+        </head>
+        
+</head>
+<body>
+    <h1>Amazon Scraper API Documentation</h1>
+    <p>This API allows you to scrape product details, reviews, offers, and search results from Amazon.</p>
+
+    <div class="endpoint">
+        <h2>Get Product Details</h2>
+        <p>Retrieve details of a specific Amazon product.</p>
+        <pre>
+            <code>GET /products/:productId</code>
+        </pre>
+        <div class="example">
+            <p>Example:</p>
+            <pre>
+                <code>/products/B07G3QMPB5</code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h2>Get Product Reviews</h2>
+        <p>Retrieve reviews of a specific Amazon product.</p>
+        <pre>
+            <code>GET /products/:productId/reviews</code>
+        </pre>
+        <div class="example">
+            <p>Example:</p>
+            <pre>
+                <code>/products/B07G3QMPB5/reviews</code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h2>Get Product Offers</h2>
+        <p>Retrieve offers for a specific Amazon product.</p>
+        <pre>
+            <code>GET /products/:productId/offers</code>
+        </pre>
+        <div class="example">
+            <p>Example:</p>
+            <pre>
+                <code>/products/B07G3QMPB5/offers</code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h2>Search for Products</h2>
+        <p>Search for products on Amazon by a query.</p>
+        <pre>
+            <code>GET /search/:searchQuery</code>
+        </pre>
+        <div class="example">
+            <p>Example:</p>
+            <pre>
+                <code>/search/laptop</code>
+            </pre>
+        </div>
+    </div>
+
+    <h2>Usage</h2>
+    <p>To use this API, make GET requests to the specified endpoints as shown in the examples above. The API will return JSON responses with the scraped data.</p>
+
+    <h2>API Base URL</h2>
+    <p>The base URL for the API is not specified in this documentation, but you can define it in your code using the API key provided.</p>
+    
+    <p>Remember to handle errors properly in your application, as the API might return 500 Internal Server Error for invalid requests.</p>
+</body>
+</html>

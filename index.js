@@ -9,7 +9,10 @@ const apiKey = '2c9b9d5304f0e97477158939e4f6fa90';
 const baseUrl = `http://api.scraperapi.com?api_key=${apiKey}&autoparse=true`;
 
 app.get('/', (req, res) => {
-    res.send('this is a web scraper amazon api designed by vivek');
+    // Read the HTML documentation file and send it as a response.
+    const fs = require('fs');
+    const documentationHtml = fs.readFileSync('api.html', 'utf8');
+    res.send(documentationHtml);
 });
 
 // GET Product Details
